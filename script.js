@@ -1,4 +1,4 @@
-const targetDate = new Date("2025-04-10T00:00:00");
+const targetDate = new Date(2025, 3, 10, 0, 0, 0);
 
 function updateTime() {
     const now = new Date();
@@ -9,16 +9,15 @@ function updateTime() {
         return;
     }
 
-    const minutes = Math.floor(diff / (1000 * 60));
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const totalSeconds = Math.floor(diff / 1000);
 
-    const remainHours = hours % 24;
-    const remainMinutes = minutes % 60;
+    const days = Math.floor(totalSeconds / (60 * 60 * 24));
+    const hours = Math.floor((totalSeconds % (60 * 60 * 24)) / (60 * 60));
+    const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
 
     document.getElementById("result").innerHTML =
-        `已經 ${days} 天 ${remainHours} 小時 ${remainMinutes} 分鐘 ✨`;
+        `已經 ${days} 天 ${hours} 小時 ${minutes} 分鐘 ✨`;
 }
 
 updateTime();
-setInterval(updateTime, 60000);
+setInterval(updateTime, 1000);
