@@ -13,7 +13,8 @@ function updateTime() {
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    resultElement.innerHTML = `在一起 ${days} 天 ${hours} 小時 ${minutes} 分鐘 ♥️`;
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    resultElement.innerHTML = `在一起 ${days} 天 ${hours} 小時 ${minutes} 分鐘 ${seconds} 秒 ♥️`;
 }
 updateTime();
 setInterval(updateTime, 1000);
