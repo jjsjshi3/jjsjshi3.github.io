@@ -79,13 +79,29 @@ if (mainCard && cardsContainer) {
                 content += event.text ? event.text : "美好的回憶";
             } else {
                 // 计算倒计时
-                let diffMs = eventDate - now;
-                const diffDays = Math.max(0, Math.floor(diffMs / (1000 * 60 * 60 * 24)));
-                const diffMonths = Math.floor(diffDays / 30);
-                const remainingDays = diffDays % 30;
+             // ... 之前的代码 ...
 
-                content += `距離還有 ${diffMonths} 月 ${remainingDays} 天`;
-            }
+} else {
+    // 计算倒计时
+    let diffMs = eventDate - now;
+    
+    if (diffMs <= 0) {
+        content += "❤️ 就在今天！";
+    } else {
+        // 使用 Math.ceil 确保哪怕只有几小时也算 1 天
+        const totalDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+        
+        const diffMonths = Math.floor(totalDays / 30);
+        const remainingDays = totalDays % 30;
+
+        // 优化显示文字
+        if (diffMonths > 0) {
+            content += `距離還有 ${diffMonths} 月 ${remainingDays} 天`;
+        } else {
+            content += `距離還有 ${remainingDays} 天`;
+        }
+    }
+}
 
             card.innerHTML = content;
             cardsContainer.appendChild(card);
