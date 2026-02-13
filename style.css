@@ -126,7 +126,7 @@ img {
 }
 
 #cardValentine.show {
-    transform: translate(60%, -50%) scale(1) rotate(0deg);
+    transform: translate(-120%, -50%) scale(1) rotate(0deg);
     opacity: 1;
     background: linear-gradient(135deg, #ff6ec4, #7873f5);
 }
