@@ -28,7 +28,6 @@ body {
 .card {
     position: relative;
     z-index: 2;
-
     backdrop-filter: blur(25px);
     background: rgba(255,255,255,0.15);
     padding: 45px;
@@ -36,7 +35,10 @@ body {
     text-align: center;
     color: white;
     box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-    width: 380px;
+    width: 380px;           /* 固定寬度 */
+    min-width: 380px;       /* 不會縮窄 */
+    max-width: 380px;       /* 不會變寬 */
+    transition: transform 0.4s ease;
 }
 
 .card:hover {
