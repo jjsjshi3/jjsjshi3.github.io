@@ -30,11 +30,10 @@ mainCard.addEventListener("click", () => {
     mainCard.classList.add("flip");
 
     // 顯示小卡片
-    setTimeout(() => {
-        document.querySelectorAll(".mini-card").forEach((card, idx) => {
-            setTimeout(() => {
-                card.classList.add("show");
-            }, idx * 300); // 每張小卡片間隔動畫
-        });
-    }, 800); // 等待翻轉動畫結束
+    const miniCards = document.querySelectorAll(".mini-card");
+    miniCards.forEach((card, idx) => {
+        setTimeout(() => {
+            card.classList.add("show");
+        }, 500 + idx * 300); // 先等主卡片翻轉一半，然後逐張出現
+    });
 });
