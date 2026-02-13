@@ -120,7 +120,7 @@ img {
 
 /* 浮起 + 左右偏移 + 漸顯 */
 #card100.show {
-    transform: translate(-160%, -70%) scale(1) rotate(0deg);
+    transform: translate(-160%, -140%) scale(1) rotate(0deg);
     opacity: 1;
     background: linear-gradient(135deg, #ff9a9e, #fad0c4);
 }
