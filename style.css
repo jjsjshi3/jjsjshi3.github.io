@@ -37,7 +37,7 @@ h1 {
     font-size: 26px;
     font-weight: bold;
 
-    background: linear-gradient(90deg, #ff6ec4, #7873f5, #42e695);
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4, #ff9a9e);
     background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -56,13 +56,7 @@ h1 {
     font-size: 22px;
     font-weight: bold;
 
-    background: linear-gradient(
-        90deg,
-        #ff0080,
-        #ff8c00,
-        #40e0d0,
-        #ff0080
-    );
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4, #ff9a9e);
     background-size: 300%;
     
     -webkit-background-clip: text;
