@@ -16,7 +16,7 @@ function updateTime() {
     const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
 
     document.getElementById("result").innerHTML =
-        `已經 ${days} 天 ${hours} 小時 ${minutes} 分鐘 ✨`;
+        `已經\n${days} 天 ${hours} 小時 ${minutes} 分鐘 ♥️`;
 }
 
 updateTime();
