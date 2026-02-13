@@ -66,9 +66,9 @@ if (mainCard && cardsContainer) {
                 } else if (totalDays >= 30) {
                     const months = Math.floor(totalDays / 30);
                     const days = totalDays % 30;
-                    content += `<span style="font-size:13px;">距離還有 ${months} 月 ${days} 天</span>`;
+                    content += `<span style="font-size:13px;">還有 ${months} 月 ${days} 天</span>`;
                 } else {
-                    content += `<span style="font-size:13px;">距離還有 ${totalDays} 天</span>`;
+                    content += `<span style="font-size:13px;">還有 ${totalDays} 天</span>`;
                 }
             }
 
