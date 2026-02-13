@@ -6,7 +6,8 @@ body {
     align-items: center;
     font-family: 'Segoe UI', sans-serif;
     background: url("images/love.jpg") no-repeat center center;
-    background-size: auto;   /* 保留原始尺寸 */
+    background-size: contain;  /* 保持比例，完整顯示圖片 */
+    background-color: #000;    /* 如果圖片小於螢幕，加深色背景避免空白 */
     position: relative;
 }
 
