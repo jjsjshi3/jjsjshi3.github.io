@@ -99,7 +99,6 @@ img {
     pointer-events: none;
 }
 
-/* 小卡片初始狀態隱藏 */
 .mini-card {
     position: absolute;
     top: 50%;
@@ -107,19 +106,25 @@ img {
     transform: translate(-50%, -50%) scale(0);
     width: 250px;
     padding: 20px;
-    background: rgba(255,105,180,0.85);
-    color: white;
     text-align: center;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     font-size: 16px;
+    color: white;
     opacity: 0;
     transition: all 0.8s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-/* 浮起效果 */
-.mini-card.show {
-    transform: translate(-50%, -50%) scale(1) translateY(-50px);
+/* 彈出後位置不同 */
+#card100.show {
+    transform: translate(-160%, -50%) scale(1); /* 左偏 */
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    opacity: 1;
+}
+
+#cardValentine.show {
+    transform: translate(60%, -50%) scale(1); /* 右偏 */
+    background: linear-gradient(135deg, #ff6ec4, #7873f5);
     opacity: 1;
 }
 
