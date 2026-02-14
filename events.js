@@ -10,7 +10,8 @@ const events = [
     {
         title: "情人節",
         date: "2026-02-14",
-        type: "future"  // 未來紀念日
+        type: "past",
+        text: "最重要的纪念日却陪不到最爱的你..."
     },
     {
         title: "520紀念日",
