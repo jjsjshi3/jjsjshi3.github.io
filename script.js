@@ -56,7 +56,7 @@ if (mainCard && cardsContainer) {
 
             // --- 倒计时修复 ---
             if (event.type === "past") {
-                content += `<span style="font-size:12px; opacity:0.8;">✨ 美好回憶</span>`;
+                content += `<span style="font-size:12px; opacity:0.8;">✨ 回憶</span>`;
             } else {
                 // 计算天数差值（向上取整，避免出现0月0天）
                 const diffMs = eventDate - now;
