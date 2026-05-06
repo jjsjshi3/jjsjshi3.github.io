@@ -1,24 +1,27 @@
 // 1. 在一起的时间计算
 const targetDate = new Date(2025, 9, 4, 0, 0, 0);
-const freezeDate = new Date(2026, 4, 6, 0, 0, 0);
+const freezeDate = new Date(2026, 4, 6, 0, 0, 0); // 注意：月份从0开始，5月=4
 
 function updateTime() {
     const resultElement = document.getElementById("result");
     if (!resultElement) return;
-    const now = new Date();
-    const diff = now - freezeDate;
+
+    const diff = freezeDate - targetDate;
+
     if (diff < 0) {
         resultElement.innerHTML = "期待相遇 💕";
         return;
     }
+
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-    resultElement.innerHTML = `在一起 ${days} 天 ${hours} 小時 ${minutes} 分鐘 ${seconds} 秒 ♥️`;
+
+    resultElement.innerHTML = `定格在 2026/5/6 ｜在一起 ${days} 天 ${hours} 小時 ${minutes} 分鐘 ${seconds} 秒 ♥️`;
 }
+
 updateTime();
-setInterval(updateTime, 1000);
 
 // 2. 核心：点击主卡片生成小卡片
 const mainCard = document.getElementById("mainCard");
