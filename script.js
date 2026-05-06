@@ -1,11 +1,12 @@
 // 1. 在一起的时间计算
 const targetDate = new Date(2025, 9, 4, 0, 0, 0);
+const freezeDate = new Date(2026, 4, 6, 0, 0, 0);
 
 function updateTime() {
     const resultElement = document.getElementById("result");
     if (!resultElement) return;
     const now = new Date();
-    const diff = now - targetDate;
+    const diff = now - freezeDate;
     if (diff < 0) {
         resultElement.innerHTML = "期待相遇 💕";
         return;
